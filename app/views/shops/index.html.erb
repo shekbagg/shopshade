@@ -1,0 +1,19 @@
+<div class="contain">
+<h1>Shops</h1>
+<h2>Total scraped: <%= @total_scraped %></h2>
+
+<table>
+ <tr>
+   <th>Name</th>
+   <th>Store</th>
+   <th>Item</th>
+ </tr>
+ <% @last_scraped.each do |item| %>
+ <tr>
+   <td><%= item.name %></td>
+   <td><%= item.store %></td>
+   <td><%= link_to "link", item.link, target: "_blank" %></td>
+ </tr>
+ <% end %>
+</table>
+</div>
